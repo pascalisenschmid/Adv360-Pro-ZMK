@@ -2,7 +2,7 @@ macro_meh: macro_meh{
 compatible = "zmk,behavior-macro";
 label = "macro_meh";
 #binding-cells = <0>;
-bindings = <&kp LEFT_ALT>, <&kp LEFT_SHIFT>, <&kp LCTRL>;
+bindings = <&mt LEFT_ALT undefined>, <&mt LEFT_SHIFT undefined>, <&mt LCTRL undefined>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
