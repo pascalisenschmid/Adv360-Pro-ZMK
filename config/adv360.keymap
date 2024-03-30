@@ -23,7 +23,8 @@
 
 #define DEFAULT 0
 #define SYMBOLS 1
-#define SWITCHER 2
+#define NAV 2
+#define SWITCHER 3
 
 / {
   behaviors {
@@ -47,15 +48,15 @@
 
         default_layer {
             bindings = <
- &none    &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND   &to DEFAULT                                                           &mo SWITCHER       &kp KP_EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &none
- &none    &kp Q     &kp W             &kp E           &kp R                 &kp T           &none                                                                 &none              &kp Z         &kp U                  &kp I            &kp O              &kp P            &none
- &kp ESC  &kp A     &kp S             &kp D           &mt LCTRL F           &kp G           &none                  &kp LCMD    &none     &none     &kp RIGHT_GUI  &none              &kp H         &mt RCTRL J            &kp K            &kp L              &kp SEMI         &kp MINUS
- &kp MEH  &kp Y     &kp X             &kp C           &kp V                 &kp B                                              &none     &none                                       &kp N         &kp M                  &kp COMMA        &kp DOT            &kp APOSTROPHE   &kp MEH
- &none    &none     &none             &none           &none                                 &lt SYMBOLS BACKSPACE  &kp LSHIFT  &kp LALT  &kp RALT  &kp RSHIFT     &lt SYMBOLS SPACE                &none                  &none            &none              &none            &none
+ &none        &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND   &caps_word                                                           &mo SWITCHER       &kp KP_EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &none
+ &none        &kp Q     &kp W             &kp E           &kp R                 &kp T           &none                                                                 &none              &kp Z         &kp U                  &kp I            &kp O              &kp P            &none
+ &lt NAV ESC  &kp A     &kp S             &kp D           &hm LCTRL F           &kp G           &none                  &kp LCMD    &none     &none     &kp RIGHT_GUI  &none              &kp H         &hm RCTRL J            &kp K            &kp L              &kp SEMI         &kp MINUS
+ &kp MEH      &kp Y     &kp X             &kp C           &kp V                 &kp B                                              &none     &none                                       &kp N         &kp M                  &kp COMMA        &kp DOT            &kp APOSTROPHE   &kp MEH
+ &none        &none     &none             &none           &none                                 &lt SYMBOLS BACKSPACE  &kp LSHIFT  &kp LALT  &kp RALT  &kp RSHIFT     &lt SYMBOLS SPACE                &none                  &none            &none              &none            &none
             >;
         };
 
-        layer_keypad {
+        layer_symbol {
             bindings = <
   &none     &none           &none       &none       &none           &none       &caps_word                                                  &none       &none    &none       &none        &none        &none         &none
  &trans     &kp QUESTION    &kp HASH    &kp EXCL    &kp BACKSLASH   &kp GRAVE   &none                                                       &none       &none    &kp SLASH   &kp PIPE     &kp TILDE    &kp PERCENT   &none
@@ -64,6 +65,17 @@
   &none     &none           &none       &none       &none                       &kp DEL       &trans      &trans     &trans  &kp TAB        &kp ENTER            &none       &none        &none        &none         &none
             >;
         };
+
+        layer_nav {
+            bindings = <
+ &none   &none   &none   &none   &none   &none   &none                                  &none   &none      &none      &none    &none       &none   &none
+ &none   &none   &none   &none   &none   &none   &none                                  &none   &none      &none      &none    &none       &none   &none
+ &none   &none   &none   &none   &none   &none   &none   &none   &none   &none  &none   &none   &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &none   &none
+ &none   &none   &none   &none   &none   &none                   &none   &none                  &none      &none      &none    &none       &none   &none
+ &none   &none   &none   &none   &none           &none   &none   &none   &none  &none   &none              &none      &none    &none       &none   &none
+            >;
+        };
+
 
         layer_mod {
             bindings = <
