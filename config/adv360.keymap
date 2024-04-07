@@ -20,6 +20,10 @@
 
 #define HYPER LS(LC(LA(LCMD)))
 #define MEH LS(LC(LEFT_ALT))
+#define CTRLSHIFT LS(LCTRL)
+
+#define WINDESKRIGHT LC(LG(RIGHT))
+#define WINDESKLEFT LC(LG(LEFT))
 
 #define DEFAULT 0
 #define SYMBOLS 1
@@ -48,11 +52,11 @@
 
         default_layer {
             bindings = <
- &none        &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND   &caps_word                                                           &mo SWITCHER       &kp KP_EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &none
- &none        &kp Q     &kp W             &kp E           &kp R                 &kp T           &none                                                                 &none              &kp Z         &kp U                  &kp I            &kp O              &kp P            &none
- &lt NAV ESC  &kp A     &kp S             &kp D           &hm LCTRL F           &kp G           &none                  &kp LCMD    &none     &none     &kp RIGHT_GUI  &none              &kp H         &hm RCTRL J            &kp K            &kp L              &kp SEMI         &kp MINUS
- &kp MEH      &kp Y     &kp X             &kp C           &kp V                 &kp B                                              &none     &none                                       &kp N         &kp M                  &kp COMMA        &kp DOT            &kp APOSTROPHE   &kp MEH
- &none        &none     &none             &none           &none                                 &lt SYMBOLS BACKSPACE  &kp LSHIFT  &kp LALT  &kp RALT  &kp RSHIFT     &lt SYMBOLS SPACE                &none                  &none            &none              &none            &none
+ &none        &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp AMPERSAND   &caps_word                                                            &mo SWITCHER       &kp KP_EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &none
+ &none        &kp Q     &kp W             &kp E             &kp R                 &kp T           &none                                                                 &none              &kp Z         &kp U                  &kp I             &kp O              &kp P            &none
+ &lt NAV ESC  &kp A     &kp S             &hm CTRLSHIFT D   &hm LCTRL F           &kp G           &kp WINDESKLEFT        &kp LCMD    &none     &none     &kp RIGHT_GUI  &kp WINDESKRIGHT   &kp H         &hm RCTRL J            &hm CTRLSHIFT K   &kp L              &kp SEMI         &kp MINUS
+ &kp MEH      &kp Y     &kp X             &kp C             &kp V                 &kp B                                              &none     &none                                       &kp N         &kp M                  &kp COMMA         &kp DOT            &kp APOSTROPHE   &kp MEH
+ &none        &none     &none             &none             &none                                 &lt SYMBOLS BACKSPACE  &kp LSHIFT  &kp LALT  &kp RALT  &kp RSHIFT     &lt SYMBOLS SPACE                &none                  &none             &none              &none            &none
             >;
         };
 
